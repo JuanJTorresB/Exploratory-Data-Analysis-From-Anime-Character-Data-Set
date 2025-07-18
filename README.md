@@ -108,7 +108,7 @@ Exploratory-Data-Analysis-From-Anime-Character-Data-Set/
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/Exploratory-Data-Analysis-From-Anime-Character-Data-Set.git
+git clone https://github.com/JuanJTorresB/Exploratory-Data-Analysis-From-Anime-Character-Data-Set.git
 ```
 ```bash
 Install dependencies:
