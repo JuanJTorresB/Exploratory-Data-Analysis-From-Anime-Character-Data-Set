@@ -86,7 +86,7 @@ content.head()
 
 ### 📊 Sample Data Preview
 
-| mal_id | url                                                     | name            | name_kanji       | nicknames                                  | favorites | about                                      | image_jpg_url | image_webp_url | image_webp_small_url |
+| mal_id | url                                                     | name            | name_kanji       | nicknames                                  | favorites | about                                      | image_jpg_url (not representative) | image_webp_url (not representative) | image_webp_small_url (not representative) |
 |--------|----------------------------------------------------------|------------------|------------------|---------------------------------------------|-----------|---------------------------------------------|----------------|----------------|-----------------------|
 | 1      | https://myanimelist.net/character/1/Spike_Spiegel        | Spike Spiegel    | スパイク・スピーゲル | NaN                                         | 48133     | Birthdate: June 26, 2044 Height: 185 cm... | ...            | ...            | ...                   |
 | 2      | https://myanimelist.net/character/2/Faye_Valentine       | Faye Valentine   | フェイ・バレンタイン | NaN                                         | 9474      | Birthday: August 14, 1994 One of the me... | ...            | ...            | ...                   |
