@@ -58,8 +58,99 @@ The dataset includes the following fields:
 ### 1. Initial Data Exploration
 
 - Overview of the data structure and types
+
+```py
+
+content.info()
+content.describe(include="all")
+
+```
+
+Key observations:
+
+- The dataset has **10 columns** and **37,580 entries**.
+- Most columns are of type `object` (strings), except `mal_id` and `favorites`, which are integers.
+- Some columns have **missing values**, especially:
+  - `name_kanji` (≈26% missing)
+  - `nicknames` (≈85% missing)
+  - `about` (≈43% missing)
+  - `image_webp_small_url` has only 1 missing value.
+
+These missing values will be analyzed and handled in a later step.
+
+```py
+
+content.head()
+
+```
+
+### 📊 Sample Data Preview
+
+| mal_id | Name             | Name (Kanji)        | Nicknames                              | Favorites | About (excerpt)                                     |
+|--------|------------------|---------------------|----------------------------------------|-----------|------------------------------------------------------|
+| 1      | Spike Spiegel    | スパイク・スピーゲル | *NaN*                                  | 48133     | Birthdate: June 26, 2044 Height: 185 cm (6' 1")...   |
+| 2      | Faye Valentine   | フェイ・バレンタイン | *NaN*                                  | 9474      | Birthday: August 14, 1994 One of the members...      |
+| 3      | Jet Black        | ジェット・ブラック     | Running Rock, Black Dog                | 2239      | Jet, known on his home satellite as the "Black...    |
+| 4      | Ein              | アイン               | *NaN*                                  | 2378      | Ein is a Pembroke Welsh Corgi brought aboard...      |
+| 5      | Ichigo Kurosaki | 黒崎 一護             | Ichi-nii, Shinigami Daiko...           | 35561     | Race: Human Birthday: July 15 (Cancer) Age: 15...    |
+
+
 - Null value analysis
+
+| Column                | % Missing Values |
+|-----------------------|------------------|
+| `mal_id`              | 0.000%           |
+| `url`                 | 0.000%           |
+| `name`                | 0.000%           |
+| `name_kanji`          | 25.93%           |
+| `nicknames`           | 85.11%           |
+| `favorites`           | 0.000%           |
+| `about`               | 42.74%           |
+| `image_jpg_url`       | 0.000%           |
+| `image_webp_url`      | 0.000%           |
+| `image_webp_small_url`| 0.003%           |
+
+    -  Most of the characters registred do not have nicknames
+    - All characters have their MyAnimeList page
+
 - Basic statistics and initial impressions
+
+    - Favorites - Basic Stats
+
+```py
+
+favorites = content['favorites']
+
+print("Favorites - Basic Stats")
+print(f"Min: {favorites.min()}")
+print(f"Max: {favorites.max()}")
+print(f"Mean: {favorites.mean():.2f}")
+print(f"Median: {favorites.median()}")
+print(f"Standard Deviation: {favorites.std():.2f}")
+print(f"25th Percentile: {favorites.quantile(0.25)}")
+print(f"75th Percentile: {favorites.quantile(0.75)}")
+
+# How many characters have 0 favorites?
+print(f"Characters with 0 favorites: {(favorites == 0).sum()} ({(favorites == 0).mean()*100:.2f}%)")
+
+# Characters with >1000 favorites
+print(f"Characters with >1000 favorites: {(favorites > 1000).sum()}")
+
+```
+
+Min: 0
+Max: 144778
+Mean: 75.31
+Median: 0.0
+Standard Deviation: 1688.47
+25th Percentile: 0.0
+75th Percentile: 2.0
+Characters with 0 favorites: 22997 (61.19%)
+Characters with >1000 favorites: 318
+
+    - Boxplot showing the distribution of character favorites (limited to < 1000)
+
+![Boxplot showing the distribution of character favorites (limited to < 1000)](images\Boxplot-showing-the-distribution-of-character-favorites.png)
 
 ### 2. Data Cleaning
 
