@@ -139,16 +139,24 @@ print(f"Characters with >1000 favorites: {(favorites > 1000).sum()}")
 ```
 
 Min: 0
+
 Max: 144778
+
 Mean: 75.31
+
 Median: 0.0
+
 Standard Deviation: 1688.47
+
 25th Percentile: 0.0
+
 75th Percentile: 2.0
+
 Characters with 0 favorites: 22997 (61.19%)
+
 Characters with >1000 favorites: 318
 
-    - Boxplot showing the distribution of character favorites (limited to < 1000)
+- Boxplot showing the distribution of character favorites (limited to < 1000)
 
 ![Boxplot showing the distribution of character favorites (limited to < 1000)](images/Boxplot-showing-the-distribution-of-character-favorites.png)
 
