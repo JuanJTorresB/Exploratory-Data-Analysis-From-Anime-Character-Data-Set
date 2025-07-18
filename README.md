@@ -150,7 +150,7 @@ Characters with >1000 favorites: 318
 
     - Boxplot showing the distribution of character favorites (limited to < 1000)
 
-![Boxplot showing the distribution of character favorites (limited to < 1000)](images\Boxplot-showing-the-distribution-of-character-favorites.png)
+![Boxplot showing the distribution of character favorites (limited to < 1000)](images/Boxplot-showing-the-distribution-of-character-favorites.png)
 
 ### 2. Data Cleaning
 
