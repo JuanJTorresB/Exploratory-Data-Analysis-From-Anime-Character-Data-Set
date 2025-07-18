@@ -104,31 +104,28 @@ Exploratory-Data-Analysis-From-Anime-Character-Data-Set/
 ├── README.md
 └── requirements.txt
 
-yaml
-Copiar
-Editar
-
----
-
 ## 🚀 How to Use
 
 1. Clone this repository:
 ```bash
 git clone https://github.com/yourusername/Exploratory-Data-Analysis-From-Anime-Character-Data-Set.git
+```
+```bash
 Install dependencies:
 
-bash
-Copiar
-Editar
 pip install -r requirements.txt
+
+
+```
+
 Run the Jupyter notebook inside the notebooks/ folder to follow the full analysis.
 
-🤖 Future Work
+## 🤖 Future Work
 Merge with anime or manga datasets for cross-entity analysis
 
 Explore deeper archetype classification using NLP
 
 Build interactive dashboards
 
-📄 License
+## 📄 License
 This dataset is shared under the Open Database License. Contents: © Original Authors.
